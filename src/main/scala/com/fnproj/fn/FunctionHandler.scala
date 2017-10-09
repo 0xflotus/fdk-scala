@@ -1,7 +1,5 @@
 package com.fnproj.fn
 
-import scala.io.BufferedSource
-
 trait FunctionHandler {
 
   /**
@@ -15,7 +13,7 @@ trait FunctionHandler {
   def handle(input: String, context: Context): String
 
   def invoke(): Unit = {
-    val input: BufferedSource = FDK.read()
+    val input = FDK.read()
     val context = new Context()
 
     if (input.bufferedReader().ready()) {
