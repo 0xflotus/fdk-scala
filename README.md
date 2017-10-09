@@ -23,6 +23,12 @@ object Hello extends AutoInvokeFunctionHandler {
 }
 ```
 
+Run with
+
+```
+echo "World" | fn run
+```
+
 ## Advanced
 
 You can use Circe to derive types from JSON as in the following example
