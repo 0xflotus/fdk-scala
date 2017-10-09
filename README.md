@@ -4,6 +4,11 @@ The Scala FDK provides convenience functions for writing Scala fn code.
 
 For getting started with fn, please refer to https://github.com/fnproject/fn/blob/master/README.md
 
+## Examples
+
+This example below shows a simple "Hello World" example. A hander is passed the input from stdin along with a context
+which contains information such as the fn configuration and environment.
+
 ```scala
 import com.fnproj.fn.{Context, AutoInvokeFunctionHandler}
 
