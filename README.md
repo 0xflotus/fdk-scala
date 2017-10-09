@@ -10,12 +10,15 @@ This example below shows a simple "Hello World" example. A hander is passed the 
 which contains information such as the fn configuration and environment.
 
 ```scala
+package com.fnproj.fn.example
+
 import com.fnproj.fn.{Context, AutoInvokeFunctionHandler}
 
-object Hello extends App with AutoInvokeFunctionHandler {
+object Hello extends AutoInvokeFunctionHandler {
 
   def handle(input: String, context: Context): String = {
-      s"Hello, $input"
+    log(s"Function called with input $input")
+    s"Hello, $input"
   }
 }
 ```

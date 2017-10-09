@@ -11,10 +11,15 @@ trait FunctionHandler {
     */
   def handle(input: String, context: Context): String
 
+  def log(msg: String): Unit = Console.err.println(msg)
+
   def invoke(): Unit = {
-    val context = new Context()
-    getInput.map(handle(_, context))
+    getInput.map(handle(_, getContext))
       .foreach(FDK.write)
+  }
+
+  private def getContext: Context = {
+    new Context()
   }
 
   /**

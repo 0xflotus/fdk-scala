@@ -14,11 +14,4 @@ object FDK {
     * @param msg
     */
   def write(msg: String): Unit = Console.out.println(msg)
-
-  /**
-    * Write a log message
-    *
-    * @param msg
-    */
-  def log(msg: String): Unit = Console.err.println(msg)
 }
