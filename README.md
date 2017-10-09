@@ -4,15 +4,16 @@ Scala FDK for fnproject
 
 
 ```scala
+package com.fnproj.fn.example
 
-import com.fnproj.fn._
+import com.fnproj.fn.{Context, FunctionHandler}
 
-object Main extends Handler {
+object Hello extends App {
 
-  def handler(cxt: Context, input: String): String = {
-      "Hello, World!"
-  }
+  new FunctionHandler {
+    def handle(input: String, context: Context): String = {
+      s"Hello, $input"
+    }
+  }.run()
 }
-
-
 ```
