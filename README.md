@@ -1,6 +1,8 @@
-# FDK Scala
+# Scala Function Development Kit (FDK)
 
-Scala FDK for fnproject
+The Scala FDK provides convenience functions for writing Scala fn code.
+
+For getting started with fn, please refer to https://github.com/fnproject/fn/blob/master/README.md
 
 ```scala
 import com.fnproj.fn.{Context, AutoInvokeFunctionHandler}
