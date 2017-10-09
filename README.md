@@ -17,6 +17,14 @@ object Hello extends App with AutoInvokeFunctionHandler {
 
 You can use Circe to derive types from JSON as in the following example
 
+Define the input for our greeting function
+
+```json
+{
+    "name": "Owain"
+}
+```
+
 ```scala
 package com.fnproj.fn.example
 
