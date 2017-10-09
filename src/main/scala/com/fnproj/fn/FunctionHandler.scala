@@ -11,8 +11,6 @@ trait FunctionHandler {
     */
   def handle(input: String, context: Context): String
 
-  def log(msg: String): Unit = Console.err.println(msg)
-
   def invoke(): Unit = {
     getInput.map(handle(_, getContext))
       .foreach(FDK.write)

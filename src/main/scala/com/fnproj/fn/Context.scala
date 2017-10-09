@@ -4,5 +4,5 @@ class Context {
 
   def getConfig: Map[String, String] = Map.empty
 
-  def log(msg: String) = ()
+  def log(msg: String): Unit = Console.err.println(msg)
 }
