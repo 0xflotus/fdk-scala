@@ -14,7 +14,7 @@ trait FunctionHandler {
     */
   def handle(input: String, context: Context): String
 
-  def run(): Unit = {
+  def invoke(): Unit = {
     val input: BufferedSource = FDK.read()
     val context = new Context()
 
@@ -23,4 +23,12 @@ trait FunctionHandler {
       FDK.write(result)
     }
   }
+}
+
+/**
+  * When extending the auto invoke function handler, the handle method is automatically
+  * triggered with the function execution context
+  */
+trait AutoInvokeFunctionHandler extends FunctionHandler {
+  invoke()
 }

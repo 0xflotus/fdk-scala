@@ -1,12 +1,10 @@
 package com.fnproj.fn.example
 
-import com.fnproj.fn.{Context, FunctionHandler}
+import com.fnproj.fn.{Context, AutoInvokeFunctionHandler}
 
-object Hello extends App {
+object Hello extends App with AutoInvokeFunctionHandler {
 
-  new FunctionHandler {
-    def handle(input: String, context: Context): String = {
+  def handle(input: String, context: Context): String = {
       s"Hello, $input"
-    }
-  }.run()
+  }
 }
