@@ -23,4 +23,4 @@ WORKDIR /function
 
 ADD . /function/
 
-RUN ["sbt", "test"]
+RUN ["sbt", "run"]

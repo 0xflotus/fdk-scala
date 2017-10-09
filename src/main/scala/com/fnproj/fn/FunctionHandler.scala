@@ -1,7 +1,6 @@
 package com.fnproj.fn
 
 trait FunctionHandler {
-
   /**
     * Handler defines the user entry point for a function
     *
@@ -13,13 +12,20 @@ trait FunctionHandler {
   def handle(input: String, context: Context): String
 
   def invoke(): Unit = {
-    val input = FDK.read()
     val context = new Context()
+    getInput.map(handle(_, context))
+      .foreach(FDK.write)
+  }
 
-    if (input.bufferedReader().ready()) {
-      val result = handle(input.mkString, context)
-      FDK.write(result)
-    }
+  /**
+    * Read stdin. We only consume if there is data to be read
+    * otherwise the buffer will block
+    *
+    * @return
+    */
+  private def getInput: Option[String] = {
+    val input = FDK.read()
+    if (input.bufferedReader().ready()) Some(input.mkString) else None
   }
 }
 
