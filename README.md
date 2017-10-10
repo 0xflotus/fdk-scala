@@ -53,10 +53,7 @@ object HelloCirce extends App with AutoInvokeFunctionHandler {
 
   def handle(input: String, context: Context): String = {
     val greeting = decode[Greeting](input)
-    greeting.fold(
-      _ => "Hello, World!",
-      greeting => s"Hello, ${greeting.name}!"
-    )
+    greeting.fold(_ => "Hello, World!", g => s"Hello, ${g.name}!")
   }
 }
 ```
