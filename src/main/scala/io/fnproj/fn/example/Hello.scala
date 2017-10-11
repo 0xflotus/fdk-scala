@@ -1,6 +1,6 @@
-package com.fnproj.fn.example
+package io.fnproj.fn.example
 
-import com.fnproj.fn.{Context, AutoInvokeFunctionHandler}
+import io.fnproj.fn.{Context, AutoInvokeFunctionHandler}
 
 object Hello extends AutoInvokeFunctionHandler {
 

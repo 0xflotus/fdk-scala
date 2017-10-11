@@ -10,9 +10,9 @@ This example below shows a simple "Hello World" example. A hander is passed the 
 which contains information such as the fn configuration and environment.
 
 ```scala
-package com.fnproj.fn.example
+package io.fnproj.fn.example
 
-import com.fnproj.fn.{Context, AutoInvokeFunctionHandler}
+import io.fnproj.fn.{Context, AutoInvokeFunctionHandler}
 
 object Hello extends AutoInvokeFunctionHandler {
 
@@ -42,9 +42,9 @@ Define the input for our greeting function
 ```
 
 ```scala
-package com.fnproj.fn.example
+package io.fnproj.fn.example
 
-import com.fnproj.fn.{AutoInvokeFunctionHandler, Context}
+import io.fnproj.fn.{AutoInvokeFunctionHandler, Context}
 import io.circe.generic.auto._, io.circe.parser._
 
 case class Greeting(name: String)

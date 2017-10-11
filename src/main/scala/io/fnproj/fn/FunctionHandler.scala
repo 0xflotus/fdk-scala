@@ -1,4 +1,4 @@
-package com.fnproj.fn
+package io.fnproj.fn
 
 trait FunctionHandler {
   /**
