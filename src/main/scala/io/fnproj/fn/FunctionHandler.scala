@@ -11,14 +11,12 @@ trait FunctionHandler {
     */
   def handle(input: String, context: Context): String
 
-  def invoke(): Unit = {
+  def invoke(): Unit =
     getInput.map(handle(_, getContext))
       .foreach(FDK.write)
-  }
-
-  private def getContext: Context = {
+ 
+  private def getContext: Context =
     new Context()
-  }
 
   /**
     * Read stdin. We only consume if there is data to be read
