@@ -3,7 +3,7 @@ package io.fnproj.fn.example
 import io.fnproj.fn.{AutoInvokeFunctionHandler, Context}
 import io.circe.generic.auto._, io.circe.parser._
 
-case class Greeting(name: String)
+sealed case class Greeting(name: String)
 
 object HelloCirce extends App with AutoInvokeFunctionHandler {
 
